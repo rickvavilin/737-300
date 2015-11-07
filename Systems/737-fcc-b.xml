@@ -114,7 +114,9 @@
       </condition>
     </enable>	
     <type>gain</type>
-    <input> <!-- this is for LOCALIZER CAPTURE -->
+     <!-- commented due to bug with selected-deg property
+    <input> --> <!-- this is for LOCALIZER CAPTURE -->
+     <!--
       <condition>
         <property>/instrumentation/nav[1]/nav-loc</property>
       </condition>
@@ -129,7 +131,7 @@
           </product>
         </sum>
       </expression>
-    </input>
+    </input> -->
     <input> <!-- this is for other modes (VOR, LNAV) -->
       <expression>
         <sum>

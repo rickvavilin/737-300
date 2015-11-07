@@ -114,7 +114,9 @@
       </condition>
     </enable>	
     <type>gain</type>
-    <input> <!-- this is for LOCALIZER CAPTURE -->
+     <!-- commented due to bug with selected-deg property
+    <input>--> <!-- this is for LOCALIZER CAPTURE -->
+     <!--
       <condition>
         <property>/instrumentation/nav[0]/nav-loc</property>
       </condition>
@@ -122,21 +124,21 @@
         <sum>
           <property>/instrumentation/nav[0]/radials/selected-deg</property>
           <property>/environment/magnetic-variation-deg</property>
-          <property>autopilot/internal/target-heading-shift-nav1</property>
+          <property>/autopilot/internal/target-heading-shift-nav1</property>
           <product>
-            <property>orientation/heading-deg</property>
+            <property>/orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
       </expression>
-    </input>
+    </input> -->
     <input> <!-- this is for other modes (VOR, LNAV) -->
       <expression>
         <sum>
           <property>/instrumentation/nav[0]/radials/target-radial-deg</property>
-          <property>autopilot/internal/target-heading-shift-nav1</property>
+          <property>/autopilot/internal/target-heading-shift-nav1</property>
           <product>
-            <property>orientation/heading-deg</property>
+            <property>/orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
@@ -202,9 +204,9 @@
       <expression>
         <sum>
           <property>/instrumentation/gps/wp/leg-true-course-deg</property>
-          <property>autopilot/internal/target-heading-shift-fms</property>
+          <property>/autopilot/internal/target-heading-shift-fms</property>
           <product>
-            <property>orientation/heading-deg</property>
+            <property>/orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
@@ -219,7 +221,7 @@
             <value>-1</value>
           </product>
           <product>
-            <property>orientation/heading-deg</property>
+            <property>/orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
@@ -249,7 +251,7 @@
       </condition>
     </enable>	
     <input>
-      <prop>autopilot/internal/fcca-heading-bug-error-deg</prop>
+      <prop>/autopilot/internal/fcca-heading-bug-error-deg</prop>
     </input>
     <reference>
       <value>0</value>
@@ -366,7 +368,7 @@
   </enable>
   <type>gain</type>
   <gain>1.0</gain>
-  <input>autopilot/internal/current-vertical-speed-fpm</input>
+  <input>/autopilot/internal/current-vertical-speed-fpm</input>
   <output>/autopilot/settings/fcca-vertical-speed-fpm</output>
  </filter>
 
@@ -531,7 +533,7 @@
   <input>
     <property>/instrumentation/nav/gs-rate-of-climb-fpm</property>
     <offset>
-      <property>autopilot/internal/nav1-gs-rate</property>
+      <property>/autopilot/internal/nav1-gs-rate</property>
       <scale>3000.0</scale>
     </offset>
   </input>
