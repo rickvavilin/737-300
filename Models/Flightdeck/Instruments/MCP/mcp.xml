@@ -614,6 +614,7 @@
  
   <animation>
   <type>select</type>
+  <object-name>apvs5b</object-name>
   <object-name>apvs4b</object-name>
   <object-name>apvs3b</object-name>
   <object-name>apvs2b</object-name>
