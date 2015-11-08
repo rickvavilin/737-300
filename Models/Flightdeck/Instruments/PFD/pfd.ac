@@ -875,7 +875,7 @@ kids 0
 OBJECT poly
 name "dmetxt"
 loc 0.0000000 0.0000000 0.0000000
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 numvert 4
 0.0100300 0.0581460 0.0517230
@@ -894,7 +894,7 @@ kids 0
 OBJECT poly
 name "dmetxt.001"
 loc 0.0000000 0.0000000 0.0000000
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 numvert 4
 0.0100300 0.0580440 0.0470320
@@ -913,7 +913,7 @@ kids 0
 OBJECT poly
 name "dmetxt.002"
 loc 0.0000000 0.0000000 0.0000000
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 numvert 4
 0.0100300 0.0580440 0.0437280
@@ -932,7 +932,7 @@ kids 0
 OBJECT poly
 name "dmetxt.003"
 loc 0.0000000 0.0000000 0.0000000
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 numvert 4
 0.0100300 0.0580440 0.0404230
@@ -951,7 +951,7 @@ kids 0
 OBJECT poly
 name "dmetxt.004"
 loc 0.0000000 0.0000000 0.0000000
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 numvert 4
 0.0100300 0.0580440 0.0370820
@@ -1332,7 +1332,7 @@ kids 0
 OBJECT poly
 name "mach"
 loc 0.0000000 0.0000000 0.0000000
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 numvert 4
 0.0106710 0.0520780 0.0411150
