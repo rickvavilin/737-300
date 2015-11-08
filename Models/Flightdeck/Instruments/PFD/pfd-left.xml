@@ -466,10 +466,10 @@
         <property>/autopilot/internal/CMDA</property>
         <value>true</value>
       </equals>
-      <equals>
+     <!-- <equals>
         <property>/autopilot/internal/VNAV</property>
         <value>true</value>
-      </equals>
+      </equals> -->
       <equals>
         <property>/autopilot/internal/VNAV-GS</property>
         <value>true</value>
@@ -555,10 +555,10 @@
             <property>/autopilot/internal/CMDA</property>
             <value>true</value>
           </equals>
-          <equals>
+          <!--<equals>
             <property>/autopilot/internal/VNAV</property>
             <value>true</value>
-          </equals>
+          </equals>-->
           <equals>
             <property>/autopilot/internal/VNAV-ALT</property>
             <value>true</value>
