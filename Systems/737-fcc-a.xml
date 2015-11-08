@@ -114,16 +114,13 @@
       </condition>
     </enable>	
     <type>gain</type>
-     <!-- commented due to bug with selected-deg property
-    <input>--> <!-- this is for LOCALIZER CAPTURE -->
-     <!--
+    <input> <!-- this is for LOCALIZER CAPTURE -->
       <condition>
         <property>/instrumentation/nav[0]/nav-loc</property>
       </condition>
       <expression>
         <sum>
-          <property>/instrumentation/nav[0]/radials/selected-deg</property>
-          <property>/environment/magnetic-variation-deg</property>
+          <property>/instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
           <property>/autopilot/internal/target-heading-shift-nav1</property>
           <product>
             <property>/orientation/heading-deg</property>
@@ -131,7 +128,7 @@
           </product>
         </sum>
       </expression>
-    </input> -->
+    </input>
     <input> <!-- this is for other modes (VOR, LNAV) -->
       <expression>
         <sum>
