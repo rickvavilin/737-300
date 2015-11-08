@@ -13,8 +13,12 @@
     <object-name>apalt2</object-name> 
     <object-name>apalt3</object-name> 
     <object-name>apalt4</object-name> 
-    <object-name>apalt5</object-name> 
-    <object-name>apspd1</object-name> 
+    <object-name>apalt5</object-name>
+    <object-name>ralt1</object-name>
+    <object-name>ralt2</object-name>
+    <object-name>ralt3</object-name>
+    <object-name>ralt4</object-name>
+    <object-name>apspd1</object-name>
     <object-name>apspd2</object-name> 
     <object-name>apspd3</object-name> 
     <object-name>asi1</object-name> 
@@ -63,6 +67,19 @@
 </animation>
 
 
+<animation>
+    <type>select</type>
+    <object-name>ralt1</object-name>
+    <object-name>ralt2</object-name>
+    <object-name>ralt3</object-name>
+    <object-name>ralt4</object-name>
+    <condition>
+        <less-than>
+            <property>/position/altitude-agl-ft</property>
+            <value>3000.0</value>
+        </less-than>
+    </condition>
+</animation>
  
 <animation>
    <type>select</type>
@@ -670,6 +687,59 @@
    <z>0</z>
   </axis>
  </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>ralt1</object-name>
+        <property>/instrumentation/radar-altimeter/radar-altitude-ft</property>
+        <factor>0.10</factor>
+        <step>1.0</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>ralt2</object-name>
+        <property>/instrumentation/radar-altimeter/radar-altitude-ft</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>ralt3</object-name>
+        <property>/instrumentation/radar-altimeter/radar-altitude-ft</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>ralt4</object-name>
+        <property>/instrumentation/radar-altimeter/radar-altitude-ft</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
 
   <animation>
    <type>textranslate</type>

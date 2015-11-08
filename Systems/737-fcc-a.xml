@@ -120,10 +120,11 @@
       </condition>
       <expression>
         <sum>
-          <property>/instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
-          <property>/autopilot/internal/target-heading-shift-nav1</property>
+          <property>/instrumentation/nav[0]/radials/selected-deg</property>
+          <property>/environment/magnetic-variation-deg</property>
+          <property>autopilot/internal/target-heading-shift-nav1</property>
           <product>
-            <property>/orientation/heading-deg</property>
+            <property>orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
@@ -133,9 +134,9 @@
       <expression>
         <sum>
           <property>/instrumentation/nav[0]/radials/target-radial-deg</property>
-          <property>/autopilot/internal/target-heading-shift-nav1</property>
+          <property>autopilot/internal/target-heading-shift-nav1</property>
           <product>
-            <property>/orientation/heading-deg</property>
+            <property>orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
@@ -192,7 +193,7 @@
       <condition>
         <property>/autopilot/internal/LNAV</property>
       </condition>
-    </enable>	
+    </enable>
     <type>gain</type>
     <input>
       <condition>
@@ -201,9 +202,9 @@
       <expression>
         <sum>
           <property>/instrumentation/gps/wp/leg-true-course-deg</property>
-          <property>/autopilot/internal/target-heading-shift-fms</property>
+          <property>autopilot/internal/target-heading-shift-fms</property>
           <product>
-            <property>/orientation/heading-deg</property>
+            <property>orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
@@ -218,7 +219,7 @@
             <value>-1</value>
           </product>
           <product>
-            <property>/orientation/heading-deg</property>
+            <property>orientation/heading-deg</property>
             <value>-1</value>
           </product>
         </sum>
@@ -246,9 +247,9 @@
           <property>/autopilot/internal/GA-ROLL</property>
         </or>
       </condition>
-    </enable>	
+    </enable>
     <input>
-      <prop>/autopilot/internal/fcca-heading-bug-error-deg</prop>
+      <prop>autopilot/internal/fcca-heading-bug-error-deg</prop>
     </input>
     <reference>
       <value>0</value>
@@ -276,7 +277,7 @@
           <property>/autopilot/internal/GA-ROLL</property>
         </or>
       </condition>
-    </enable>	
+    </enable>
     <input>
       <prop>/orientation/roll-deg</prop>
     </input>
@@ -365,7 +366,7 @@
   </enable>
   <type>gain</type>
   <gain>1.0</gain>
-  <input>/autopilot/internal/current-vertical-speed-fpm</input>
+  <input>autopilot/internal/current-vertical-speed-fpm</input>
   <output>/autopilot/settings/fcca-vertical-speed-fpm</output>
  </filter>
 
@@ -472,7 +473,7 @@
       <condition>
         <property>/autopilot/internal/VNAV-ALT-ACQ</property>
       </condition>
-    </enable>	
+    </enable>
     <input>
       <prop>/instrumentation/altimeter[0]/indicated-altitude-ft</prop>
     </input>
@@ -499,7 +500,7 @@
       <condition>
         <property>/autopilot/internal/VNAV-ALT</property>
       </condition>
-    </enable>	
+    </enable>
     <input>
       <prop>/instrumentation/altimeter[0]/pressure-alt-ft</prop>
     </input>
@@ -526,11 +527,11 @@
     <condition>
       <property>/autopilot/internal/VNAV-GS</property>
     </condition>
-  </enable>	
+  </enable>
   <input>
     <property>/instrumentation/nav/gs-rate-of-climb-fpm</property>
     <offset>
-      <property>/autopilot/internal/nav1-gs-rate</property>
+      <property>autopilot/internal/nav1-gs-rate</property>
       <scale>3000.0</scale>
     </offset>
   </input>
