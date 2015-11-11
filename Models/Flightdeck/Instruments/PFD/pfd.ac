@@ -8,7 +8,7 @@ MATERIAL "Material.001" rgb 0.8000 0.8000 0.8000  amb 1.0000 1.0000 1.0000  emis
 MATERIAL "Gaugemetal.002" rgb 0.9015 0.9015 0.9015  amb 1.0000 1.0000 1.0000  emis 0.0000 0.0000 0.0000  spec 0.0877 0.0877 0.0877  shi 50 trans 0.0000
 OBJECT world
 name "Blender_export__pfd.ac"
-kids 43
+kids 47
 OBJECT poly
 name "AI"
 loc 0.0000000 -0.0020000 0.000000
